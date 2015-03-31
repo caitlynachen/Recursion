@@ -1,0 +1,15 @@
+package jrJava.recursion;
+
+import java.io.File;
+
+public class TestWithFile {
+
+
+	public static void main(String[] args) {
+		File file = new File("maze.png");
+		System.out.println(file.isDirectory());
+		System.out.println(file.length());
+		
+	}
+
+}
