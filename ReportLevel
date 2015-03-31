@@ -1,0 +1,22 @@
+package jrJava.recursion;
+
+import resources.Timer;
+
+public class ReportLevel {
+
+	private static Timer timer= new Timer();
+	public static void main(String[] args) {
+		method1(10);
+
+	}
+	private static void method1(int level){
+		level--;
+		if(level==0)return;
+		System.out.println(level);
+		timer.pause(500);
+		method1(level);
+		
+		System.out.println(level);
+	}
+
+}
