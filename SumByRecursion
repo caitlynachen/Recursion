@@ -1,0 +1,20 @@
+package jrJava.recursion;
+
+import resources.Timer;
+
+public class SumByRecursion {
+
+	
+	public static void main(String[] args) {
+		System.out.println(addUpTo(10));
+
+	}
+	private static int addUpTo(int num){
+	
+		if(num==0)return num;
+		return num+addUpTo(num-1);
+		
+		
+	}
+
+}
