@@ -1,0 +1,25 @@
+package jrJava.recursion;
+
+import java.io.File;
+
+public class FileTest {
+
+
+	public static void main(String[] args) {
+		/*File file = new File("C:/temp/root/folder1");
+		System.out.println(file.getPath());
+		System.out.println(file.length());
+		System.out.println(file.isDirectory());
+		System.out.println(file.canRead());
+
+		if(file.isDirectory()){
+			File [] files = file.listFiles();
+			for(int i =0; i<files.length;i++){
+			System.out.println(files[i].getName() + "   is it a directory?   " + files[i].isDirectory());
+			}
+			
+		}
+		*/
+	}
+
+}
