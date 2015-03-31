@@ -1,0 +1,48 @@
+package jrJava.recursion;
+
+import java.io.*;
+
+public class FindTheLine {
+
+
+	public static void main(String[] args) {
+		File file = new File("c:/temp/root");
+		treeSearch(file);
+		
+		
+	}
+	
+	private static void treeSearch(File file){
+		//if it is a directory, get its content and continue searching 
+		
+		//else  read the Text
+		
+		if(file.isDirectory()==true){
+			File[] files = file.listFiles();
+			for(int i = 0; i<files.length; i++){
+				treeSearch(files [i]);
+			}
+			
+		}
+		
+		else{
+			readText(file);
+		}
+		}
+	private static void readText(File file){
+		try{
+		FileInputStream fis = new FileInputStream(file);
+		InputStreamReader isr = new InputStreamReader(fis);
+		BufferedReader br = new BufferedReader(isr);
+		
+		while(true){
+			String line = br.readLine();
+			if(line==null) break;
+			if(line.indexOf('c')==40 && line.length()==48) System.out.println(line);
+		}
+		}
+		catch(IOException ioe){
+			ioe.printStackTrace();
+		}
+	}
+}
